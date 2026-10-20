@@ -6,7 +6,7 @@ import { setSyncUser, setSyncErrorHandler, syncAll } from './sync.js'
 import { buildWeakPackage } from './weak.js'
 import { buildErrorPackage, collectErrors } from './errors.js'
 import { AccountContext } from './components/Ui.jsx'
-import Auth from './components/Auth.jsx'
+import Auth, { NewPassword } from './components/Auth.jsx'
 import Home from './components/Home.jsx'
 import Quiz from './components/Quiz.jsx'
 import Result from './components/Result.jsx'
@@ -19,6 +19,7 @@ export default function App() {
   const [history, setHistory] = useState(loadHistory)
   // undefined = sedang memeriksa sesi; null = belum masuk (atau mode lokal tanpa Supabase)
   const [session, setSession] = useState(supabase ? undefined : null)
+  const [recovering, setRecovering] = useState(false) // datang dari tautan reset kata sandi
   const [syncError, setSyncError] = useState(false)
   const errorCount = useMemo(() => collectErrors(history, loadNotes()).length, [history, view.name])
 
@@ -26,7 +27,10 @@ export default function App() {
     setSyncErrorHandler(() => setSyncError(true))
     if (!supabase) return undefined
     supabase.auth.getSession().then(({ data }) => setSession(data.session))
-    const { data } = supabase.auth.onAuthStateChange((_event, s) => setSession(s))
+    const { data } = supabase.auth.onAuthStateChange((event, s) => {
+      if (event === 'PASSWORD_RECOVERY') setRecovering(true)
+      setSession(s)
+    })
     return () => data.subscription.unsubscribe()
   }, [])
 
@@ -79,6 +83,7 @@ export default function App() {
 
   if (supabase && session === undefined) return <div className="desk"><p className="muted" style={{ padding: 24 }}>Memeriksa sesi...</p></div>
   if (supabase && !session) return <Auth />
+  if (recovering) return <NewPassword recovery onDone={() => setRecovering(false)} />
 
   return (
     <AccountContext.Provider value={account}>
@@ -97,6 +102,9 @@ export default function App() {
         {view.name === 'review' && (
           <Review attempt={view.attempt} {...common}
             onBack={() => setView(view.back === 'history' ? { name: 'history' } : { name: 'result', attempt: view.attempt })} />
+        )}
+        {view.name === 'password' && account && (
+          <NewPassword email={account.email} bandProps={common} onDone={() => nav('home')} />
         )}
         {view.name === 'history' && (
           <History history={history} onClear={wipe} {...common}

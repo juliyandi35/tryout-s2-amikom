@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react'
-import { House, Notebook, ClockCounterClockwise, SignOut } from '@phosphor-icons/react'
+import { House, Notebook, ClockCounterClockwise, SignOut, Key } from '@phosphor-icons/react'
 
 const ICON = { size: 18, weight: 'bold', 'aria-hidden': true }
 
@@ -24,6 +24,7 @@ export function Band({ page, onNav, errorCount = 0, children }) {
           {item('home', 'Beranda', <House {...ICON} />)}
           {item('errors', 'Buku kesalahan', <Notebook {...ICON} />, errorCount)}
           {item('history', 'Riwayat', <ClockCounterClockwise {...ICON} />)}
+          {account && item('password', 'Ganti sandi', <Key {...ICON} />)}
           {account && (
             <button className="band-btn" title={account.email} aria-label={`Keluar dari akun ${account.email}`} onClick={account.signOut}>
               <SignOut {...ICON} /><span className="lbl">Keluar akun</span>
