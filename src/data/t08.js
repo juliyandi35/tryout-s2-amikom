@@ -1,0 +1,35 @@
+// [topik, soal, [opsi A-D], indeks jawaban benar, pembahasan]
+// Modul TKA 08: Penalaran Kuantitatif (perbandingan kuantitas, aljabar, geometri, peluang, statistika dasar)
+const CMP = ['P lebih besar dari Q', 'P lebih kecil dari Q', 'P sama dengan Q', 'Tidak dapat ditentukan']
+
+export default [
+  ['kua', 'Bandingkan kuantitas berikut.\nP = 2³ + 3²\nQ = 4² + 1', CMP, 2, 'P = 8 + 9 = 17 dan Q = 16 + 1 = 17, sehingga P = Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = 15% dari 200\nQ = 20% dari 160', CMP, 1, 'P = 30 dan Q = 32, sehingga P < Q.'],
+  ['kua', 'Diketahui x > 0. Bandingkan kuantitas berikut.\nP = x²\nQ = 2x', CMP, 3, 'Untuk x = 1: P = 1 < Q = 2. Untuk x = 3: P = 9 > Q = 6. Hasil berbeda, sehingga tidak dapat ditentukan.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = √50\nQ = 7', CMP, 0, '7² = 49 < 50, sehingga √50 > 7 dan P > Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = 1/2\nQ = 1/3', CMP, 0, 'Pecahan dengan pembilang sama: penyebut lebih kecil berarti nilai lebih besar. P > Q.'],
+  ['kua', 'Diketahui a = 3b dan b > 0. Bandingkan kuantitas berikut.\nP = a\nQ = 2b', CMP, 0, 'P = 3b dan Q = 2b. Karena b > 0, maka 3b > 2b dan P > Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = rata-rata dari 2, 4, 6, 8\nQ = median dari 1, 3, 5, 9, 12', CMP, 2, 'P = 20/4 = 5 dan Q = 5 (nilai tengah). P = Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = banyak diagonal pada segi enam\nQ = banyak titik sudut pada kubus', CMP, 0, 'Diagonal segi-n = n(n − 3)/2 = 9, sedangkan kubus memiliki 8 titik sudut. P > Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = 20% dari 50\nQ = 50% dari 20', CMP, 2, 'Keduanya 10 (sifat a% dari b = b% dari a). P = Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = (−2)³\nQ = (−2)²', CMP, 1, 'P = −8 dan Q = 4. P < Q.'],
+  ['kua', 'Diketahui x² = 16. Bandingkan kuantitas berikut.\nP = x\nQ = 4', CMP, 3, 'x dapat bernilai 4 atau −4. Jika x = 4 maka P = Q; jika x = −4 maka P < Q. Tidak dapat ditentukan.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = 1/2 + 1/3\nQ = 3/4', CMP, 0, 'P = 5/6 ≈ 0,833 dan Q = 0,75. P > Q.'],
+  ['kua', 'Jika 2x + 5 = 17, maka nilai x adalah…', ['5', '6', '7', '11'], 1, '2x = 12, maka x = 6.'],
+  ['kua', 'Jika 3(x − 2) = 2x + 4, maka nilai x adalah…', ['2', '6', '10', '14'], 2, '3x − 6 = 2x + 4, sehingga x = 10.'],
+  ['kua', 'Jumlah dua bilangan adalah 30 dan selisihnya 8.\n\nBilangan yang lebih besar adalah…', ['17', '19', '22', '23'], 1, '(30 + 8)/2 = 19 dan bilangan kecil 11.'],
+  ['kua', 'Sebuah persegi panjang berukuran panjang 12 cm dan lebar 5 cm.\n\nKelilingnya adalah…', ['17 cm', '34 cm', '60 cm', '68 cm'], 1, 'Keliling = 2 × (12 + 5) = 34 cm. Angka 60 adalah luasnya.'],
+  ['kua', 'Luas lingkaran berjari-jari 7 cm (π = 22/7) adalah…', ['44 cm²', '98 cm²', '154 cm²', '308 cm²'], 2, 'L = πr² = 22/7 × 49 = 154 cm². Angka 44 adalah keliling.'],
+  ['kua', 'Keliling lingkaran berdiameter 14 cm (π = 22/7) adalah…', ['22 cm', '44 cm', '88 cm', '154 cm'], 1, 'K = πd = 22/7 × 14 = 44 cm.'],
+  ['kua', 'Sebuah segitiga siku-siku memiliki sisi tegak 6 cm dan 8 cm.\n\nPanjang sisi miringnya adalah…', ['9 cm', '10 cm', '12 cm', '14 cm'], 1, '√(6² + 8²) = √100 = 10 cm.'],
+  ['kua', 'Sebuah balok berukuran 4 cm × 5 cm × 6 cm.\n\nVolumenya adalah…', ['15 cm³', '74 cm³', '120 cm³', '148 cm³'], 2, 'V = 4 × 5 × 6 = 120 cm³.'],
+  ['kua', 'Dua sudut dalam sebuah segitiga berukuran 50° dan 60°.\n\nSudut ketiganya adalah…', ['60°', '70°', '80°', '110°'], 1, 'Jumlah sudut dalam segitiga 180°. 180° − 110° = 70°.'],
+  ['kua', 'Sebuah kartu diambil secara acak dari kartu bernomor 1 sampai 10.\n\nPeluang terambil kartu bernomor prima adalah…', ['1/5', '2/5', '1/2', '3/5'], 1, 'Bilangan prima: 2, 3, 5, 7 (4 buah). Peluang = 4/10 = 2/5.'],
+  ['kua', 'Dua dadu dilempar bersamaan.\n\nPeluang jumlah kedua mata dadu sama dengan 7 adalah…', ['1/12', '1/9', '1/6', '1/3'], 2, 'Ada 6 pasangan (1+6, 2+5, 3+4, 4+3, 5+2, 6+1) dari 36 kemungkinan, jadi 6/36 = 1/6.'],
+  ['kua', 'Median dari data 7, 3, 9, 5, 11 adalah…', ['5', '6', '7', '9'], 2, 'Data terurut: 3, 5, 7, 9, 11. Nilai tengahnya 7.'],
+  ['kua', 'Modus dari data 2, 3, 3, 4, 5, 3, 6 adalah…', ['3', '4', '5', '6'], 0, 'Angka 3 muncul paling sering (tiga kali).'],
+  ['kua', 'Kelas A terdiri atas 20 siswa dengan rata-rata nilai 70, sedangkan kelas B terdiri atas 30 siswa dengan rata-rata nilai 80.\n\nRata-rata gabungan kedua kelas adalah…', ['75', '76', '77', '78'], 1, '(20×70 + 30×80) ÷ 50 = (1400 + 2400) ÷ 50 = 76. Bukan 75 karena jumlah siswa tidak sama.'],
+  ['kua', 'Bilangan bulat terkecil x yang memenuhi 2x − 3 > 7 adalah…', ['5', '6', '7', '10'], 1, '2x > 10 sehingga x > 5. Bilangan bulat terkecil yang lebih besar dari 5 adalah 6.'],
+  ['kua', 'Jika f(x) = 3x + 2, maka f(4) adalah…', ['10', '12', '14', '18'], 2, 'f(4) = 3 × 4 + 2 = 14.'],
+  ['kua', 'Jika x + y = 10 dan x − y = 2, maka nilai xy adalah…', ['16', '21', '24', '30'], 2, 'Menjumlahkan: 2x = 12 sehingga x = 6, y = 4. xy = 24.'],
+]

@@ -1,0 +1,9 @@
+.env*
+node_modules/
+dist/
+.vercel/
+.claude/
+.impeccable/
+.playwright-mcp/
+Cheat Sheet TKA AMIKOM.pdf
+npm-debug.log*

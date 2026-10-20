@@ -1,0 +1,36 @@
+// [topik, soal, [opsi A-D], indeks jawaban benar, pembahasan]
+// Modul TKA 08 (Set B): Penalaran Kuantitatif
+const CMP = ['P lebih besar dari Q', 'P lebih kecil dari Q', 'P sama dengan Q', 'Tidak dapat ditentukan']
+
+export default [
+  ['kua', 'Bandingkan kuantitas berikut.\nP = 3³ − 2³\nQ = 4² + 4', CMP, 1, 'P = 27 − 8 = 19 dan Q = 16 + 4 = 20, sehingga P < Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = 40% dari 150\nQ = 25% dari 240', CMP, 2, 'P = 60 dan Q = 60, sehingga P = Q.'],
+  ['kua', 'Diketahui x adalah bilangan real positif. Bandingkan kuantitas berikut.\nP = x²\nQ = x', CMP, 3, 'Untuk x = 0,5: P = 0,25 < Q = 0,5. Untuk x = 2: P = 4 > Q = 2. Hasil berbeda, sehingga tidak dapat ditentukan.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = √80\nQ = 9', CMP, 1, '9² = 81 > 80, sehingga √80 < 9 dan P < Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = 2/3\nQ = 3/5', CMP, 0, 'P ≈ 0,667 dan Q = 0,6, sehingga P > Q.'],
+  ['kua', 'Diketahui a = 2b dan b < 0. Bandingkan kuantitas berikut.\nP = a\nQ = b', CMP, 1, 'Karena b negatif, 2b lebih kecil daripada b (misal b = −3, a = −6). Jadi P < Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = rata-rata dari 10, 20, 30\nQ = median dari 5, 15, 40', CMP, 0, 'P = 20 dan Q = 15, sehingga P > Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = banyak rusuk limas segiempat\nQ = banyak rusuk prisma segitiga', CMP, 1, 'Limas segiempat memiliki 8 rusuk, prisma segitiga memiliki 9 rusuk. P < Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = 0,2 × 0,5\nQ = 10% dari 1', CMP, 2, 'P = 0,1 dan Q = 0,1, sehingga P = Q.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = (−3)²\nQ = −3²', CMP, 0, 'P = 9 dan Q = −9 (tanda minus di luar pangkat), sehingga P > Q.'],
+  ['kua', 'Diketahui y² = 25. Bandingkan kuantitas berikut.\nP = y\nQ = −5', CMP, 3, 'y dapat 5 atau −5. Jika y = 5 maka P > Q; jika y = −5 maka P = Q. Tidak dapat ditentukan.'],
+  ['kua', 'Bandingkan kuantitas berikut.\nP = 1/4 + 1/6\nQ = 2/5', CMP, 0, 'P = 5/12 ≈ 0,417 dan Q = 0,4, sehingga P > Q.'],
+  ['kua', 'Jika 3x − 7 = 11, maka nilai x adalah…', ['4', '5', '6', '18'], 2, '3x = 18, sehingga x = 6.'],
+  ['kua', 'Jika 4(x − 3) = 2x + 6, maka nilai x adalah…', ['3', '6', '9', '12'], 2, '4x − 12 = 2x + 6, sehingga 2x = 18 dan x = 9.'],
+  ['kua', 'Jumlah dua bilangan adalah 50 dan selisihnya 12.\n\nBilangan yang lebih besar adalah…', ['19', '31', '38', '44'], 1, '(50 + 12)/2 = 31 dan bilangan kecil 19.'],
+  ['kua', 'Sebuah persegi panjang berukuran panjang 15 cm dan lebar 8 cm.\n\nKelilingnya adalah…', ['23 cm', '46 cm', '60 cm', '120 cm'], 1, 'Keliling = 2 × (15 + 8) = 46 cm. Angka 120 adalah luasnya.'],
+  ['kua', 'Sebuah segitiga memiliki alas 10 cm dan tinggi 6 cm.\n\nLuasnya adalah…', ['16 cm²', '30 cm²', '60 cm²', '120 cm²'], 1, 'L = ½ × alas × tinggi = ½ × 10 × 6 = 30 cm².'],
+  ['kua', 'Luas lingkaran berdiameter 28 cm (π = 22/7) adalah…', ['88 cm²', '308 cm²', '616 cm²', '2.464 cm²'], 2, 'r = 14, L = 22/7 × 14 × 14 = 616 cm².'],
+  ['kua', 'Sebuah segitiga siku-siku memiliki sisi tegak 9 cm dan 12 cm.\n\nPanjang sisi miringnya adalah…', ['13 cm', '15 cm', '17 cm', '21 cm'], 1, '√(81 + 144) = √225 = 15 cm.'],
+  ['kua', 'Volume kubus berusuk 7 cm adalah…', ['49 cm³', '147 cm³', '343 cm³', '294 cm³'], 2, '7³ = 343 cm³.'],
+  ['kua', 'Dua sudut dalam sebuah segitiga berukuran 35° dan 85°.\n\nSudut ketiganya adalah…', ['50°', '60°', '70°', '120°'], 1, '180° − 120° = 60°.'],
+  ['kua', 'Sebuah kantong berisi 5 bola merah, 3 bola biru, dan 2 bola hijau. Satu bola diambil secara acak.\n\nPeluang terambil bola biru adalah…', ['3/10', '1/3', '3/7', '1/2'], 0, 'Bola biru 3 dari total 10, peluang 3/10.'],
+  ['kua', 'Dua koin dilempar bersamaan.\n\nPeluang keduanya menunjukkan gambar adalah…', ['1/8', '1/4', '1/3', '1/2'], 1, 'Ada 4 kemungkinan sama besar; hanya satu yang GG. Peluang 1/4.'],
+  ['kua', 'Median dari data 12, 4, 8, 16, 10 adalah…', ['8', '10', '12', '16'], 1, 'Data terurut: 4, 8, 10, 12, 16. Nilai tengahnya 10.'],
+  ['kua', 'Modus dari data 5, 7, 7, 8, 5, 7, 9 adalah…', ['5', '7', '8', '9'], 1, 'Angka 7 muncul tiga kali, terbanyak.'],
+  ['kua', 'Sepuluh orang memiliki rata-rata nilai 60, sedangkan empat puluh orang lainnya memiliki rata-rata nilai 70.\n\nRata-rata gabungan kelima puluh orang adalah…', ['65', '66', '68', '70'], 2, '(10×60 + 40×70) ÷ 50 = (600 + 2800) ÷ 50 = 68.'],
+  ['kua', 'Bilangan bulat terbesar x yang memenuhi 3x + 2 < 14 adalah…', ['3', '4', '5', '6'], 0, '3x < 12, sehingga x < 4. Bilangan bulat terbesar yang kurang dari 4 adalah 3.'],
+  ['kua', 'Jika f(x) = 2x² − 1, maka f(3) adalah…', ['11', '15', '17', '35'], 2, 'f(3) = 2 × 9 − 1 = 17.'],
+  ['kua', 'Jika x − y = 4 dan x + y = 12, maka nilai xy adalah…', ['16', '24', '32', '48'], 2, 'Menjumlahkan: 2x = 16 sehingga x = 8, y = 4. xy = 32.'],
+  ['kua', 'Jika 3^(x − 1) = 81, maka nilai x adalah…', ['3', '4', '5', '27'], 2, '81 = 3⁴, sehingga x − 1 = 4 dan x = 5.'],
+]
